@@ -84,24 +84,18 @@ y = randint(-300,-0 )
 
 des_triangulo(x,y,100,'black')
 
-def poligono(x,y,t,a,r,color):
-    t.pu()
-    t.goto(x,y)
-    t.pd()
-    t.begin_fill()
-    t.fillcolor(color)
-    for _ in range(r):
-        t.fd(t)
-        t.right(a)
-    t.end_fill()
-
-x=randint(0,300)
-y=randint(0,300)
-t=randint(10,50)
-a=randint(45,90)
-r=randint(0,4)
-
-poligono(x,y,t,a,r,'black')
+#Spiral farm aura
+color = textinput("Obter cor", "Digite a cor:")
+t.color("black")
+t.begin_fill()
+t.fillcolor( color)
+t.pu()
+t.goto(150,-100)
+t.pd()
+t.speed(0)
+for i in range(40):
+    t.fd(i*2)
+    t.lt(45)
 
 
 
